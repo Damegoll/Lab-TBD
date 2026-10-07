@@ -1,0 +1,13 @@
+======== Entidades =======:
+
+Region(idRegion{PK}, nombreRegion)
+Comuna(idComuna{PK}, idRegion{FK}. nombreComuna)
+Local/Galeria(idLocal{PK}, idComuna{FK}, nombreLocal)
+Producto(idProducto{PK}, idLocal{FK}, tipoProducto. precio, peso, estado)
+Empleado(idEmpleado{PK}, idLocal{FK}, NombreEmp, ApellidoEmp, telefonoEmp, género, calle, numCalle, fechaNacEmp)
+Sueldo(idSueldo{PK}, idEmpleado{FK}, monto, fechaSueldo)
+Cliente(idCliente{PK}, nombreCli, apellidoCli, telefonoCli, calleCli, numCalleCli, fechaNacCli)
+Venta(idVenta{PK}, idCliente{FK}, idEmpleado{FK}, fechaVenta)
+
+======= Relaciones M:N =======:
+detalle_venta([idProducto{FK}m idVenta{FK}]{PK})
