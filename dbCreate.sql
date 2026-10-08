@@ -25,7 +25,7 @@ idProducto INT AUTO_INCREMENT PRIMARY KEY,
 idLocal INT,
 tipoProducto VARCHAR (9),
 precio INT,
-preso FLOAT,
+peso FLOAT,
 Estado VARCHAR(10),
 FOREIGN KEY (idLocal) REFERENCES galeria(idLocal)
 );
@@ -40,7 +40,7 @@ generoEmpleado VARCHAR(10),
 calleEmpleado VARCHAR(50),
 numeroCalleEmpleado INT,
 fechaNacimientoEmpleado DATE,
-FOREIGN KEY (idLocal) REFERENCES geleria(idLocal)
+FOREIGN KEY (idLocal) REFERENCES galeria(idLocal)
 );
 
 CREATE TABLE IF NOT EXISTS sueldo (
