@@ -8,7 +8,7 @@ USE TBDGrupo2;
     YEAR(v.fechaVenta) as Anio,
 	COUNT(*) AS TotalVentas,
     /* 
-    la funcio row_number le asigna un numero de posicion a cada fila
+    la funcion row_number le asigna un numero de posicion a cada fila
     partition by year divide los datos por año 
     order by count ordena los productos de cierto año de mayor a menor segun la cantidad
     de ventas
