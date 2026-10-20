@@ -12,7 +12,7 @@ fi
 echo "Iniciando con $MOTOR y construyendo la base de datos..."
 $MOTOR run --name galeria_db -e MYSQL_ROOT_PASSWORD=root -v "$(pwd)/dbCreate.sql":/docker-entrypoint-initdb.d/01_esquema.sql -v "$(pwd)/loadData.sql":/docker-entrypoint-initdb.d/02_datos.sql -p 3307:3306 -d mariadb
 
-echo "Esperando a que el motor MariaDB arranque..."
+echo "Esperando a que el motor MariaDB arranque (Esto puede tardar unos segundos)..."
 sleep 15
 
 echo "Ejecutando las consultas de prueba..."
